@@ -21,7 +21,7 @@ def m2tex(model,modelName):
         tmp = stringlist[ix]
         stringlist[ix] = tmp[0:31]+"& "+tmp[31:59]+"& "+tmp[59:]+"\\\\ \hline"
     stringlist[0] = "Model: {} \\\\ \hline".format(modelName)
-    stringlist[1] = stringlist[1]+" \hline"
+    stringlist[1] += " \hline"
     stringlist[-4] += " \hline"
     stringlist[-3] += " \\\\"
     stringlist[-2] += " \\\\"
