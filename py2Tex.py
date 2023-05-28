@@ -12,10 +12,10 @@ TODO documentation
 __author__ = 'intentodemusico'
 
 
-from tensorflow.keras import Model
+import tensorflow as tf
 
 
-def m2tex(model: Model, modelName: str, line_length: int):
+def m2tex(model: tf.keras.Model, modelName: str, line_length: int):
     stringlist = []
     model.summary(line_length=line_length, print_fn=lambda x: stringlist.append(x))
     del stringlist[1:-4:2]
